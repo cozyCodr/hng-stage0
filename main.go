@@ -20,7 +20,7 @@ func main() {
 		handlers.AllowedOrigins([]string{"*"}),
 	)
 
-	router.HandleFunc("/api", all_handlers.MainHandler).Methods("GET")
+	router.HandleFunc("/", all_handlers.MainHandler).Methods("GET")
 
 	port := os.Getenv("PORT")
 	if port == "" {
